@@ -1,0 +1,8 @@
+@import '../../styles/variable.scss';
+
+.active {
+  cursor: pointer;
+  > path {
+    fill: $yellow;
+  }
+}

@@ -1,0 +1,16 @@
+.main {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.title {
+  display: flex;
+  align-items: baseline;
+  column-gap: 30px;
+  padding-left: 20px;
+}
+
+.products {
+  display: flex;
+  overflow-y: hidden;
+}

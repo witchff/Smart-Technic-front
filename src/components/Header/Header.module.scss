@@ -1,0 +1,35 @@
+@import '../../styles/variable.scss';
+
+.header {
+  width: 100%;
+}
+
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 60;
+  background-color: $background-light-blue;
+}
+
+.header_info {
+  display: inline-block;
+  font-size: $font-size-16;
+  font-weight: $font-medium;
+  line-height: 100%;
+  color: $text-main;
+  :last-child {
+    color: $text-gray;
+  }
+
+  > * {
+    margin-right: 20px;
+  }
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

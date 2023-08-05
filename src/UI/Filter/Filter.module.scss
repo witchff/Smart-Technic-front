@@ -1,0 +1,39 @@
+@import '../../styles/variable.scss';
+
+.filter {
+  width: 310px;
+}
+
+.title {
+  padding: 10px 10px 10px 20px;
+  background-color: $background-light-blue;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  div > svg {
+    width: 14px;
+    height: 12px;
+    cursor: pointer;
+    vertical-align: baseline;
+  }
+}
+
+.value {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  opacity: 0;
+  height: 0;
+  transition: all 0.2s linear;
+
+  > * {
+    align-self: flex-start;
+  }
+}
+
+.value.open {
+  opacity: 1;
+  height: 100%;
+}

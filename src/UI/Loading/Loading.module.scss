@@ -1,0 +1,23 @@
+.loading {
+  border: 4px dashed black;
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  animation-name: animateLoading;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
+
+@keyframes animateLoading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

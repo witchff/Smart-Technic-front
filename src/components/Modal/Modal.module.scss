@@ -1,0 +1,57 @@
+@import '../../styles/variable.scss';
+
+.modal {
+  opacity: 1;
+  background-color: #fff;
+  width: 350px;
+  min-height: 320px;
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes animateOpen {
+  0% {
+    top: 20%;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    top: 50%;
+  }
+}
+
+@keyframes animateClose {
+  0% {
+    top: 50%;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 20%;
+  }
+}
+
+.open {
+  animation-name: animateOpen;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: both;
+}
+
+.close {
+  animation-name: animateClose;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: both;
+}
+
+.header {
+  background-color: $background-light-blue;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}

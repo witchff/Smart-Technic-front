@@ -1,0 +1,105 @@
+@import '../../styles/variable.scss';
+
+.product {
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  column-gap: 70px;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  :last-child {
+    width: 280px;
+  }
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+}
+
+.minus {
+  width: 20px;
+  height: 20px;
+  stroke: $divider;
+  cursor: pointer;
+  align-self: inherit !important;
+}
+
+.counter {
+  width: 48px;
+  height: 48px;
+  border: 1px solid $divider;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.plus {
+  width: 20px;
+  height: 20px;
+  stroke: $text-main;
+  cursor: pointer;
+}
+
+.price_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+
+  > span {
+    display: inline-block;
+  }
+}
+
+.price {
+  font-size: $font-size-24;
+  font-weight: $font-bold;
+  line-height: 130%;
+  color: $text-main;
+
+  &_sale {
+    font-size: $font-size-16;
+    font-weight: $font-bold;
+    line-height: 130%;
+    text-decoration: line-through;
+    color: $text-gray;
+  }
+}
+
+.sale {
+  padding: 3px 5px;
+  background-color: $background-orange;
+  border-radius: 14px;
+
+  :first-child {
+    background-color: $background-white;
+    padding: 0 4px;
+    color: $text-main;
+    font-size: $font-size-14;
+    font-weight: $font-regular;
+    border-radius: 23px;
+    margin-right: 5px;
+  }
+
+  :last-child {
+    color: $text-white;
+    font-size: $font-size-14;
+    font-weight: $font-bold;
+    line-height: 130%;
+  }
+}
+
+.remove {
+  align-self: initial;
+}

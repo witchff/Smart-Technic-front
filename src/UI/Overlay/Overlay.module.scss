@@ -1,0 +1,56 @@
+@import '../../styles/variable.scss';
+
+.overlay {
+  background-color: rgba($color: $dark-blue, $alpha: 0.6);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  // display: none;
+  // opacity: 0;
+  // pointer-events: none;
+  // transition: all 0.4s linear;
+}
+
+@keyframes animateOpen {
+  0% {
+    opacity: 0;
+    pointer-events: none;
+  }
+  100% {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+@keyframes animateClose {
+  0% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.open {
+  // display: block;
+  // opacity: 1;
+  // pointer-events: all;
+  animation-name: animateOpen;
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in;
+}
+
+.close {
+  // display: block;
+  // opacity: 0;
+  // pointer-events: none;
+  animation-name: animateClose;
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in;
+}

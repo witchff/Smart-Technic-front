@@ -1,0 +1,27 @@
+@import '../../styles/variable.scss';
+
+.category {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  padding: 12px 18px;
+  cursor: pointer;
+
+  > span {
+    color: $text-main;
+    font-size: $font-size-16;
+    font-weight: $font-medium;
+    line-height: 130%;
+  }
+
+  > img {
+    object-fit: cover;
+    width: 32px;
+    height: 32px;
+  }
+
+  &:hover {
+    background-color: $background-null;
+    transition: all 0.15s ease-in;
+  }
+}

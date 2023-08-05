@@ -1,0 +1,39 @@
+@import '../../styles/variable.scss';
+
+.categories {
+  width: 310px;
+  background-color: $background-light-blue;
+  position: fixed;
+  z-index: 50;
+  top: 142px;
+  // margin-top: 142px;
+}
+
+.open {
+  animation-name: openDropdown;
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
+}
+.close {
+  animation-name: closeDropdown;
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
+}
+
+@keyframes openDropdown {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes closeDropdown {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

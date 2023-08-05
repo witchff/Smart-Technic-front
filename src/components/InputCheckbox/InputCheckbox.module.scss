@@ -1,0 +1,46 @@
+@import '../../styles/variable.scss';
+
+.checkbox {
+  display: inline-block;
+  span {
+    position: relative;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+
+    font-size: 16px;
+    font-weight: $font-regular;
+    line-height: 130%;
+    transition: all 0.2s linear;
+  }
+
+  span::before {
+    content: '';
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    border-radius: 4px;
+    width: 24px;
+    height: 24px;
+    border: 1px solid $card-border;
+  }
+
+  span::after {
+    content: url('../../assets/icons/check.svg');
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+  }
+
+  input {
+    display: none;
+  }
+
+  input:checked + span::after {
+    display: block;
+  }
+}

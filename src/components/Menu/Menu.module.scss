@@ -1,0 +1,11 @@
+@import '../../styles/variable.scss';
+
+.menu {
+  background-color: $background-menu-blue;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  column-gap: 40px;
+}

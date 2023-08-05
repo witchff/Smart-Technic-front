@@ -1,0 +1,49 @@
+@import '../../styles/variable.scss';
+
+.dropdown {
+  width: 280px;
+  background-color: #fff;
+  // position: absolute;
+  // top: -75px;
+  // right: 5px;
+  // z-index: 100;
+}
+
+.item {
+  :hover {
+    background-color: $background-light-blue;
+  }
+}
+
+.active {
+  background-color: $background-light-blue;
+}
+
+.open {
+  animation-name: openDropdown;
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
+}
+.close {
+  animation-name: closeDropdown;
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
+}
+
+@keyframes openDropdown {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes closeDropdown {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

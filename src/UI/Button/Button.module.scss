@@ -1,0 +1,176 @@
+@import '../../styles/variable.scss';
+
+// Общие и кастомные стили
+.default,
+.icon {
+  padding: 10px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+}
+
+.default {
+  text-align: center;
+  width: 100%;
+  font-weight: $font-semibold;
+  font-size: 16px;
+  line-height: 100%;
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+
+  :only-child {
+    width: 24px;
+    height: 24px;
+    > * {
+      stroke: $text-gray;
+    }
+  }
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  font-weight: $font-medium;
+  font-size: 16px;
+  line-height: 100%;
+  cursor: pointer;
+  :only-child {
+    width: 24px;
+    height: 24px;
+    > * {
+      stroke: $text-gray;
+    }
+  }
+
+  :hover {
+    > * {
+      stroke: $text-dark-blue;
+    }
+  }
+}
+
+// Стили для каждого варианта
+
+// Default button
+.default.primary {
+  background-color: transparent;
+  color: $text-dark-blue;
+  border: 1px solid $border-blue;
+  transition: background-color 0.15s ease-in;
+
+  &:hover {
+    background-color: $background-blue;
+    color: $text-white;
+  }
+}
+
+.default.secondary {
+  background-color: $background-blue;
+  color: $text-white;
+  transition: background-color 0.15s ease-in;
+
+  &:hover {
+    background-color: $background-dark-blue;
+  }
+}
+
+.default.tertiary {
+  background-color: $background-gray;
+  color: $text-white;
+
+  :disabled {
+    opacity: 0.4;
+  }
+}
+
+// Default button
+
+// Icon button
+.icon.primary {
+  background-color: $background-blue;
+  transition: background-color 0.15s ease-in;
+  :only-child {
+    > * {
+      stroke: $text-white;
+    }
+  }
+
+  &:hover {
+    background-color: $background-dark-blue;
+  }
+}
+
+.icon.secondary {
+  background-color: transparent;
+  border: 1px solid $divider;
+  transition: all 0.15s ease-in;
+  // :only-child {
+  //   fill: $divider;
+  // }
+  &:hover {
+    border: 1px solid $border-blue;
+  }
+}
+
+.icon.tertiary {
+  background-color: $background-light-blue;
+  :only-child {
+    > path {
+      fill: $text-dark-blue;
+    }
+  }
+}
+// Icon button
+
+// Link
+.link.primary {
+  //   color: $text-white;
+  color: $text-white;
+  position: relative;
+  cursor: pointer;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0px;
+    background-color: $background-blue;
+    height: 2px;
+    width: 0;
+    transition: width 0.2s ease-in;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+.link.secondary {
+  color: $text-blue;
+  border-bottom: 1px solid $background-blue;
+}
+
+.link.tertiary {
+  padding: 12px 18px;
+  cursor: pointer;
+  color: $text-main;
+  font-size: $font-size-16;
+  font-weight: $font-medium;
+  line-height: 130%;
+  > img {
+    object-fit: cover;
+    width: 32px;
+    height: 32px;
+  }
+
+  &:hover {
+    background-color: $background-null;
+    transition: all 0.15s ease-in;
+  }
+}

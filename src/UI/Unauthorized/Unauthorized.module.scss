@@ -1,0 +1,15 @@
+@import '../../styles/variable.scss';
+
+.unauthorized {
+  padding: 30px;
+  border-radius: 8px;
+  border: 1px solid $card-border;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

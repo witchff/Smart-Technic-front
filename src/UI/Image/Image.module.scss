@@ -1,0 +1,8 @@
+.img {
+  margin-bottom: 10px;
+  cursor: pointer;
+  :only-child {
+    display: block;
+    object-fit: cover;
+  }
+}

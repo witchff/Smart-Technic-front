@@ -1,0 +1,93 @@
+@import '../../styles/variable.scss';
+
+.wrapper {
+  position: relative;
+}
+
+// For input
+.input {
+  width: 100%;
+  padding: 10px 10px 10px 20px;
+  border-radius: 5px;
+  background-color: $background-white;
+  position: relative;
+  ::placeholder {
+    color: $text-gray;
+  }
+}
+
+.checkbox {
+  margin-right: 10px;
+  position: relative;
+
+  // ::before {
+  //   content: '';
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   height: 24px;
+  //   width: 24px;
+  //   background-color: red;
+  // }
+}
+
+.checkbox::before {
+  content: '';
+  position: absolute;
+  top: 30px;
+  left: 0;
+  height: 24px;
+  width: 24px;
+  background-color: red;
+}
+
+// Color for input
+
+.default {
+  border: 1px solid $card-border;
+  color: $text-main;
+}
+
+.error {
+  border: 1px solid $border-red;
+  color: $text-red;
+}
+
+.success {
+  border: 1px solid $border-green;
+  color: $text-geen;
+}
+
+.label {
+  display: inline-block;
+  color: $text-main;
+  font-size: $font-size-16;
+  font-weight: $font-regular;
+  line-height: 100%;
+  margin-bottom: 8px;
+}
+
+// Style for InputIcon
+
+.icon {
+  position: absolute;
+  top: 8px;
+  right: 15px;
+  width: 24px;
+  height: 24px;
+  svg {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+}
+
+.status {
+  position: absolute;
+  top: 35px;
+  right: -30px;
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
